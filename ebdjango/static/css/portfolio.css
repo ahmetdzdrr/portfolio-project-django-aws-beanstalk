@@ -1,0 +1,342 @@
+.portfolio .container {
+    padding-bottom: 40px;
+}
+
+.portfolio .portfolio-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio-heading .portfolio-filters-title {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    color: var(--text-black-900);
+    font-weight: 600;
+    border-radius: .5rem;
+}
+
+.portfolio-filters-title.active-portfolio {
+    background: var(--skin-color);
+    color: var(--bg-default-100);
+
+}
+
+.portfolio .portfolio-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.portfolio-item-inner {
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.3s ease;
+    z-index: 0;
+}
+
+.portfolio-item-inner:hover .portfolio-img {
+    filter: blur(5px);
+}
+
+.portfolio-item-inner:hover i.fa-magnifying-glass {
+    opacity: 1;
+}
+
+.portfolio-item-inner i.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: var(--bg-default-100);
+    background: var(--skin-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img p {
+    color: var(--skin-color);
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item-details {
+    display: none;
+}
+
+.portfolio-popup {
+    position: fixed;
+    top: 0;
+    left: 270px;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: .3s;
+}
+
+.portfolio-popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-popup-inner {
+    background-color: var(--bg-black-100);
+    width: 900px;
+    border-radius: .5rem;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.portfolio-popup-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.portfolio-popup-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 20px;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.portfolio-popup-img {
+    border: 1px solid var(--skin-color);
+    border-radius: .5rem;
+    width: 350px;
+}
+
+body.dark .portfolio-popup-img {
+    border: none;
+}
+
+.portfolio-popup-body {
+    height: 300px;
+    border: 1px solid var(--bg-black-100);
+}
+
+.details-title {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-black-900);
+    margin-bottom: 40px;
+}
+
+.details-info li {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black-900);
+}
+
+.details-info li:nth-child(4) {
+    margin-top: 40px;
+}
+
+.details-info li:last-child {
+    margin-bottom: 0;
+}
+
+.details-info li span {
+    font-weight: 400;
+}
+
+.details-info li a {
+    color: var(--skin-color);
+}
+
+.details-info li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:1310px) {
+    .portfolio-popup-inner {
+        width: 800px;
+    }
+}
+
+@media (max-width:1199px) {
+    .portfolio-popup {
+        left: 0;
+    }
+}
+
+@media (max-width:1055px) {
+    .portfolio-popup-inner {
+        max-width: 800px;
+    }
+}
+
+@media (max-width:967px) {
+
+    .portfolio .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .portfolio .portfolio-item .portfolio-item-inner img {
+        max-width: 100%;
+    }
+
+    .portfolio-popup-inner {
+        max-width: 700px;
+    }
+
+    .portfolio-popup-img {
+        width: 300px;
+    }
+}
+
+@media (max-width:855px) {
+    .portfolio-popup-inner {
+        max-width: 600px;
+    }
+
+    .portfolio-popup-img {
+        width: 250px;
+    }
+
+    .portfolio-popup-body .details-title {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .details-info li {
+        font-size: 14px;
+    }
+
+    .details-info li:nth-child(4) {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .portfolio .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio .portfolio-item .portfolio-item-inner img {
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .portfolio-popup-inner {
+        width: 500px;
+    }
+
+    .portfolio-popup-img {
+        width: 200px;
+    }
+
+    .portfolio-popup-body .details-title {
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .details-info li {
+        font-size: 11px;
+    }
+
+    .details-info li:nth-child(4) {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:645px) {
+
+    .portfolio-popup-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-popup-inner {
+        width: 400px;
+    }
+
+    .portfolio-popup-img {
+        display: none;
+    }
+
+    .portfolio-popup-body .details-title {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .details-info li {
+        font-size: 14px;
+    }
+
+    .details-info li:nth-child(4) {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:542px) {
+
+    .portfolio-popup-inner {
+        max-width: 300px;
+    }
+
+    .portfolio-popup-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .portfolio-popup-img {
+        display: none;
+    }
+
+    .portfolio-popup-body .details-title {
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .details-info li {
+        font-size: 14px;
+    }
+
+    .details-info li:nth-child(4) {
+        margin-top: 30px;
+    }
+}
