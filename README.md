@@ -14,6 +14,8 @@
 - [4. Environment Configurations](#4-environment-configurations)
   - [4.1 Create and Activate Environment](#41-create-and-activate-environment)
 - [5. Install Requirements](#5-install-requirements)
+- [6. AWS Configurations](#6-aws-configurations)
+- [7. Deploying with EB CLI](#6-deploying-with-eb-cli)
 
 ## 1. Overview
 
@@ -117,4 +119,33 @@ You have to install some dependencies to build and manage the project. You'll se
 
 ```
 (eb-virt)~$ pip install -r requirements.txt
+```
+
+## 6. AWS Configurations
+
+
+## 7. Deploying with EB CLI
+
+You've added everything you need to deploy your application on Elastic Beanstalk. Your project directory should now look like this.
+
+```
+~/ebdjango/
+|-- .ebextensions
+|   `-- django.config
+|-- ebdjango
+|   |-- __init__.py
+|   |-- settings.py
+|   |-- urls.py
+|   `-- wsgi.py
+|-- db.sqlite3
+|-- manage.py
+`-- requirements.txt
+```
+
+Next, you'll create your application environment and deploy your configured application with Elastic Beanstalk.
+
+1. Initialize your EB CLI repository with the eb init command. **Make sure into endjango folder.**
+
+```
+~/ebdjango$ eb init
 ```
