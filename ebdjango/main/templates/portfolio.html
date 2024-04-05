@@ -1,0 +1,166 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+<section class="portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>PORTFOLIO</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="portfolio-heading padd-15">
+                <span class="portfolio-filters-title active-portfolio" data-filter="all">ALL</span>
+                <span class="portfolio-filters-title" data-filter=".web">WEB</span>
+                <span class="portfolio-filters-title" data-filter=".app">APP</span>
+                <span class="portfolio-filters-title" data-filter=".data">DATA</span>
+                <span class="portfolio-filters-title" data-filter=".ai">AI</span>
+            </div>
+        </div>
+        <div class="row portfolio-container">
+            <div class="portfolio-item mix ai padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/chatbot.jpg' %}" alt="">
+                        <p>Gemini ChatBot AI</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Gemini Chatbot AI</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>01/2024</span></li>
+                        <li>Technologies: <span>Python & Flask & Gemini Pro</span></li>
+                        <li>Role: <span>Data Scientist</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/gemini-pro-chatbot">GitHub</a></span></li>
+                        <li>Visit: <span><a href="https://gemini-chatbot-hotf.onrender.com/">Gemini Pro Website</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio-item mix app padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/ml-app.jpg' %}" alt="">
+                        <p>Machine Learning App</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Machine Learning App</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>09/2023</span></li>
+                        <li>Technologies: <span>Python & Machine Learning</span></li>
+                        <li>Role: <span>Data Scientist</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/machine-learning-app-with-streamlit">GitHub</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="portfolio-item mix data padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/apple-stock-price.jpg' %}" alt="">
+                        <p>Apple Stock Price Prediction</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Apple Stock Price Prediction</h3>
+                    <p class="details-description">Lorem ipsum dolor sit amet.</p>
+                    <ul class="details-info">
+                        <li>Created: <span>07/2020</span></li>
+                        <li>Technologies: <span>Python & Deep Learning</span></li>
+                        <li>Role: <span>Data Scientist</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/Apple-Stock-Price-Forecasting">GitHub</a></span></li>
+                        <li><span><a href="#"></a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio-item mix web padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/streamlit.jpg' %}" alt="">
+                        <p>Streamlit Portfolio Website</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Streamlit Portfolio Website</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>01/2020</span></li>
+                        <li>Technologies: <span>Python & Streamlit & HTML - CSS</span></li>
+                        <li>Role: <span>Frontend</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/portfolio-website-with-streamlit">GitHub</a></span></li>
+                        <li>Visit: <span><a href="https://ahmetdizdar.streamlit.app/">Streamlit Portfolio Website</a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio-item mix data padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/electricity-demand.jpg' %}" alt="">
+                        <p>Electric Demand Forecasting</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Electric Demand Forecasting</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>11/2023</span></li>
+                        <li>Technologies: <span>Python & Deep Learning</span></li>
+                        <li>Role: <span>frontend</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/Time-Series-Forecasting-Electricity-Demand">GitHub</a></span></li>
+                        <li><span><a href="#"></a></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio-item mix app padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                    <div class="portfolio-img">
+                        <img src="{% static 'media/dash-app.jpg' %}" alt="">
+                        <p>Dashboard App</p>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="portfolio-item-details">
+                    <h3 class="details-title">Dashboard App</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>09/2023</span></li>
+                        <li>Technologies: <span>Python & Streamlit & HTML - CSS</span></li>
+                        <li>Role: <span>Frontend & Data Scientist</span></li>
+                        <li>Source Code: <span><a href="https://github.com/ahmetdzdrr/streamlit-dashboard-web-app">github</a></span></li>
+                        <li><span><a href="#"></a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="portfolio-popup">
+    <div class="portfolio-popup-inner">
+        <div class="portfolio-popup-content">
+            <span class="portfolio-popup-close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="portfolio-thumbnail">
+                <img src="{% static 'media/chatbot.jpg' %}" alt="" class="portfolio-popup-img">
+            </div>
+            <div class="portfolio-popup-info">
+                <div class="portfolio-popup-body">
+                    <h3 class="details-title">App & technology services</h3>
+                    <ul class="details-info">
+                        <li>Created: <span>4 dec 2020</span></li>
+                        <li>Technologies: <span>html css</span></li>
+                        <li>Role: <span>frontend</span></li>
+                        <li>Source Code: <span><a href="#">www.github.com</a></span></li>
+                        <li>Visit: <span><a href="#">www.domain.com</a></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/portfolio.js' %}"></script>
+<script src="{% static 'js/mixitup.min.js' %}"></script>
+{% endblock %}

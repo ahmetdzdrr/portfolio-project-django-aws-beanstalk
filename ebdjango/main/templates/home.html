@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<section class="home section">
+    <div class="container">
+        <div class="row">
+            <div class="home-info padd-15">
+                <h3 class="hello">Hello, my name is <span class="name">Ahmet Dizdar</span></h3>
+                <h3 class="my-profession">I'm <span class="typing">Data Scientist</span></h3>
+                <p>Combining the precision of data science with the innovation of computer engineering, I offer a unique blend of skills to tackle complex challenges. My passion for problem-solving and ability to drive insights from data make me a valuable asset to any team. Let's innovate together and make a difference.</p>
+                <a href="/about" class="btn hire-me">LEARN MORE..</a>
+            </div>
+            <div class="home-img padd-15">
+                <img src="{% static 'media/hero.jpg' %}" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

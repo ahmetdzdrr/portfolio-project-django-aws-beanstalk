@@ -1,0 +1,88 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+<section class="contact section">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>CONTACT</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <h4>Phone</h4>
+                <p><a href="https://web.whatsapp.com/send?phone=+905530215300">+90 553 021 53 00</a></p>
+            </div>
+            <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                <h4>Location</h4>
+                <p>Istanbul</p>
+            </div>
+            <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <h4>Email</h4>
+                <p><a href="mailto:a.dizdar00@gmail.com">a.dizdar00@gmail.com</a></p>
+            </div>
+            <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                <h4>Website</h4>
+                <p><a href="https://ahmetdizdar.streamlit.app">ahmetdizdar.streamlit.app</a></p>
+            </div>
+        </div>
+        <h3 class="contact-sub-title padd-15">SEND ME AN EMAIL</h3>
+        <div class="row">
+            <form class="contact-form padd-15" method="post" id="contact-form">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="form-item col-6 padd-15">
+                        <div class="form-group">
+                            <input name="name" id="name" type="text" class="form-control" placeholder="Name" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form-item col-6 padd-15">
+                        <div class="form-group">
+                            <input name="email" id="email" type="email" class="form-control" placeholder="Email" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 padd-15">
+                        <div class="form-group">
+                            <input name="subject" id="subject" type="text" class="form-control" placeholder="Subject" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12 padd-15">
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" placeholder="Message" autocomplete="off"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-item col-12 padd-15">
+                            <button type="submit" class="btn">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                       
+        </div>
+        <div class="social-media-container padd-15">
+            <a href="https://www.linkedin.com/in/ahmet-dizdarr/" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ahmetdzdrr" class="social-media-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.kaggle.com/ahmetdzdar" class="social-media-icon"><i class="fab fa-kaggle"></i></a>
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/contact.js' %}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+{% endblock %}
