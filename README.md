@@ -123,6 +123,9 @@ You have to install some dependencies to build and manage the project. You'll se
 
 ## 6. AWS Configurations
 
+We have to create ACCES_KEY and SECRET_KEY to connect our AWS Beanstalk Console. First, click the AWS Beanstalk section like below.
+
+![Ekran görüntüsü 2024-04-05 231207](https://github.com/ahmetdzdrr/portfolio-project-django-aws-beanstalk/assets/117534684/382fded8-f9b3-4ea0-ab3b-f649e3d97432)
 
 ## 7. Deploying with EB CLI
 
