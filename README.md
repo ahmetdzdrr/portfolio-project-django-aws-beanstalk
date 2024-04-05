@@ -1,7 +1,5 @@
 # portfolio-project-django-aws-beanstalk
 
-# portfolio-project-django-aws-beanstalk
-
 # Elastic Beanstalk CLI Installer
 - [1. Overview](#1-overview)
   - [1.1. Prerequisites](#11-prerequisites)
