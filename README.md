@@ -140,8 +140,42 @@ You've added everything you need to deploy your application on Elastic Beanstalk
 
 Next, you'll create your application environment and deploy your configured application with Elastic Beanstalk.
 
-1. Initialize your EB CLI repository with the eb init command. **Make sure into endjango folder.**
+1. Initialize your EB CLI repository with the eb init command. **Make sure into ebdjango folder.**
 
 ```
+(eb-virt)~$ deactivate
 ~/ebdjango$ eb init
+Do you want to set up SSH for your instances?
+(y/n): n
 ```
+
+2. Create an environment and deploy your application to it with *eb create*.
+
+```
+~/ebdjango$ eb create "name"  -> example: "eb create ahmet-dizdar"
+```
+
+3. When the environment creation process completes, find the domain name of your new environment by running *eb status*.
+
+```
+eb status
+Environment details for: django-env
+  Application name: django-tutorial
+  ...
+  CNAME: ahmet-dizdar.elasticbeanstalk.com
+  ...
+```
+
+4. Activate eb-virt environment and collect the static files to configure into AWS EBCLI
+
+```
+C:\>%HOMEPATH%\eb-virt\Scripts\activate
+(eb-virt)~/ebdjango$ python manage.py collectstatic
+```
+
+5. Deploy your application by running eb deploy. When you run eb deploy, the EB CLI bundles up the contents of your project directory and deploys it to your environment.
+
+```
+~/ebdjango$ eb deploy
+```
+
