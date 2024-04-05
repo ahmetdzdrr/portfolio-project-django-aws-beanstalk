@@ -87,10 +87,5 @@ python ./portfolio-project-django-aws-beanstalk/scripts/ebcli_installer.py
 
     python scripts/ebcli_installer.py --ebcli-source /path/to/EBCLI/codebase/on/your/computer
     ```
-  - To install the EB CLI at a **specific location**, instead of in the standard `.ebcli-virtual-env` directory in the user's home directory:
-
-    ```shell
-    python scripts/ebcli_installer.py --location /path/to/ebcli/installation/location
-    ```
 
 
