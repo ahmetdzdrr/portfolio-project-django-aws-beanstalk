@@ -11,6 +11,9 @@
   - [2.3. After installation](#23-after-installation)
 - [3. Usage](#3-usage)
   - [3.1 Advanced usage](#31-advanced-usage)
+- [4. Environment Configurations](#4-environment-configurations)
+  - [4.1 Create and Activate Environment](#41-create-and-activate-environment)
+- [5. Install Requirements](#5-install-requirements)
 
 ## 1. Overview
 
@@ -88,4 +91,30 @@ python ./portfolio-project-django-aws-beanstalk/scripts/ebcli_installer.py
     python scripts/ebcli_installer.py --ebcli-source /path/to/EBCLI/codebase/on/your/computer
     ```
 
+## 4. Environment Configurations
 
+Create a virtual environment with virtualenv and use it to install Django and its dependencies. By using a virtual environment, you can know exactly which packages your application needs, so that the required packages are installed on the Amazon EC2 instances that are running your application.
+
+The following steps demonstrate the commands you must enter for Unix-based systems and Windows, shown on separate tabs.
+
+### 4.1 Create and Actviate Environment
+
+1. Create a virtual environment named *eb-virt*
+
+```
+virtualenv %HOMEPATH%\eb-virt
+```
+
+2. Activate the virtual environment.
+
+```
+C:\>%HOMEPATH%\eb-virt\Scripts\activate
+```
+
+## 5. Install Requirements
+
+You have to install some dependencies to build and manage the project. You'll see *requirements.txt*. To install this file:
+
+```
+(eb-virt)~$ pip install -r requirements.txt
+```
